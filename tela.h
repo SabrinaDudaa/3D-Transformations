@@ -1,0 +1,20 @@
+#ifndef TELA_H
+#define TELA_H
+
+#include <stdio.h>
+#include <SDL2/SDL.h>
+
+#define WIDTH  800
+#define HEIGHT 600
+
+// Aloca a tela utilizando o título passado como parâmetro e as largura e altura definidas no tela.h
+SDL_Window *criaTela(char *titulo);
+
+// Desenha um segmento de reta na tela
+// ponto1 e ponto2 são vetores de 2 floats em coordenadas normalizadas [-1, 1]
+void desenhaArestaTela(SDL_Renderer *renderer, float *ponto1, float *ponto2);
+
+// Desaloca a tela
+void desalocaTela(SDL_Window *window);
+
+#endif // TELA_H
